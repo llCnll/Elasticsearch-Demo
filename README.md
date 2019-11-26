@@ -37,3 +37,31 @@ https://my.oschina.net/weiweiblog/blog/3018519
 
 ### 额外
 https://blog.csdn.net/chen_2890/article/details/83895646
+
+
+### 数据库
+```sql
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for blog
+-- ----------------------------
+DROP TABLE IF EXISTS `blog`;
+CREATE TABLE `blog`  (
+  `id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `summary` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of blog
+-- ----------------------------
+INSERT INTO `blog` VALUES ('1', '登黄鹤楼', '王之涣的登黄鹤楼', '白日依山尽,黄河入海流.欲穷千里目,更上一层路.');
+INSERT INTO `blog` VALUES ('2', '相思', '王维的相思', '红豆生南国,春来发几枝.愿君多采撷,此物最相思.');
+INSERT INTO `blog` VALUES ('3', '静夜思', '李白的静夜思', '床前明月光,疑是地上霜.举头望明月,低头思故乡.');
+
+SET FOREIGN_KEY_CHECKS = 1;
+```
