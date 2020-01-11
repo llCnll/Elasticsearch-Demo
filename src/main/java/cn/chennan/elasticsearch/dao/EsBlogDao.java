@@ -1,9 +1,8 @@
-package cn.chennan.elasticsearch.po.dao;
+package cn.chennan.elasticsearch.dao;
 
 import cn.chennan.elasticsearch.po.EsBlog;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.jmx.export.annotation.ManagedNotification;
 
 import java.util.List;
 

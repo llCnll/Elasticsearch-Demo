@@ -1,7 +1,7 @@
 package cn.chennan.elasticsearch;
 
 import cn.chennan.elasticsearch.po.EsBlog;
-import cn.chennan.elasticsearch.po.dao.EsBlogDao;
+import cn.chennan.elasticsearch.dao.EsBlogDao;
 import cn.chennan.elasticsearch.repository.EsBlogRepository;
 import org.junit.Before;
 import org.junit.Test;
