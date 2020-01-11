@@ -19,6 +19,9 @@ public class EsBlog implements Serializable {
     private String title;
     private String summary;
     private String content;
+
+    private User user;
+
     protected EsBlog(){}
 
     public EsBlog(String title, String summary, String content) {

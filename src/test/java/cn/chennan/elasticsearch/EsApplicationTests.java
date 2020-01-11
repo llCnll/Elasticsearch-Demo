@@ -2,6 +2,7 @@ package cn.chennan.elasticsearch;
 
 import cn.chennan.elasticsearch.po.EsBlog;
 import cn.chennan.elasticsearch.dao.EsBlogDao;
+import cn.chennan.elasticsearch.po.User;
 import cn.chennan.elasticsearch.repository.EsBlogRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -47,7 +48,8 @@ public class EsApplicationTests {
         String title = "思";
         String summary = "相思";
         String content = "相思";
-        Page<EsBlog> page = esBlogRepository.findDistinctEsBlogByTitleContainingOrSummaryContainingOrContentContaining(title, summary, content, pageable);
+//        Page<EsBlog> page = esBlogRepository.findDistinctEsBlogByTitleContainingOrSummaryContainingOrContentContaining(title, summary, content, pageable);
+        Page<EsBlog> page = esBlogRepository.findDistinctEsBlogByUserId("1", pageable);
 
         page.forEach(p->System.out.println(p));
     }
